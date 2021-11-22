@@ -1,0 +1,64 @@
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin introduction {
+  background-color: darken($color: $c1, $amount: 5);
+  color: $c6;
+  margin-top: 30px;
+  width: 80%;
+  box-shadow: 12px 12px 12px -12px $c1;
+  padding: 20px;
+  border-radius: 15px 30px;
+  border: none;
+
+  h2 {
+    font-size: 22pt;
+  }
+
+  p {
+    font-size: 14pt;
+  }
+
+  button {
+    background-color: $c4;
+    color: $c7;
+    padding: 3px 10px;
+    margin-top: 10px;
+    font-size: 14pt;
+    border-radius: 3px 6px;
+    border: none;
+    outline: none;
+
+    &:hover {
+      color: $c6;
+      background-color:$c5;
+      box-shadow: 0 0 6px lighten($color: $c5, $amount: 10);
+      transform: scale(1.03);
+      transition: all 0.4s ease-in-out;
+      cursor: pointer;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $c6;
+
+    &:hover {
+      color: $c2;
+      border-color: $c2;
+      transition: all 0.3s ease-in;
+    }
+  }
+}
+
+@mixin background {
+  animation: anim 2s;
+  background-image: url("../images/Evening_Forests_Mountains_Firewatch_Campo_Santo_549147_1920x1080.jpg");
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: auto;
+}

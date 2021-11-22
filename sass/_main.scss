@@ -1,0 +1,56 @@
+.main {
+  @include flex();
+}
+
+.introduction {
+  @include flex();
+  @include introduction();
+  @include background();
+}
+
+.introduction-projects {
+  @include flex();
+  @include introduction();
+  @include background();
+  margin-bottom: 15px
+}
+
+
+.project {
+  @include flex();
+  @include background();
+  background-color: $c1;
+  color: $c6;
+  padding: 20px;
+  border-radius: 15px 30px;
+  margin: 15px;
+  width: 100%;
+  box-shadow: 12px 12px 12px -12px $c1;
+  video {
+    padding-top: 20px;
+    width:70%; 
+  }
+  h3 {
+    font-size: 22pt;
+  }
+}
+
+.projects {
+  @include flex();
+  width: 80%;
+}
+
+@keyframes anim {
+  from {
+    background-color: $c4;
+    box-shadow: 12px 12px 12px -12px $c6;
+    border-radius: 0px 0px;
+  }
+  to {
+    background-color: darken($color: $c1, $amount: 5);
+
+    box-shadow: 12px 12px 12px -12px $c1;
+    border-radius: 15px 30px;
+  }
+}
+
