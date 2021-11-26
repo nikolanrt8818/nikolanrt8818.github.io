@@ -14,6 +14,10 @@
   padding: 20px;
   border-radius: 15px 30px;
   border: none;
+  &:hover {
+    background-color: lighten($color: $c1, $amount: 3);
+    transition: all 0.3s ease-in;
+  }
 
   h2 {
     font-size: 22pt;
@@ -35,7 +39,7 @@
 
     &:hover {
       color: $c6;
-      background-color:$c5;
+      background-color: $c5;
       box-shadow: 0 0 6px lighten($color: $c5, $amount: 10);
       transform: scale(1.03);
       transition: all 0.4s ease-in-out;
@@ -52,6 +56,12 @@
       border-color: $c2;
       transition: all 0.3s ease-in;
     }
+  }
+
+  .socialList {
+    display: inline-block;
+    list-style-type: none;
+    padding:5px 0;
   }
 }
 
