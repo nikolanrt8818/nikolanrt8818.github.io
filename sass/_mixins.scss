@@ -61,7 +61,12 @@
   .socialList {
     display: inline-block;
     list-style-type: none;
-    padding:5px 0;
+    padding: 5px 0;
+
+    img:hover {
+      transform: scale(1.06);
+      transition: all 0.1s ease-in;
+    }
   }
 }
 
