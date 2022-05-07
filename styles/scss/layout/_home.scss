@@ -1,0 +1,109 @@
+@use "../utility/" as ut;
+
+.header {
+  @include ut.flex(column, space-between, center, 2rem);
+  position: relative;
+  padding: 8rem 9rem;
+  background: linear-gradient(
+    rgba($color: ut.$main-1, $alpha: 0.1),
+    rgba($color: ut.$neutral-3, $alpha: 0.1)
+  );
+  animation: header_anim 1s ease-in-out;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+  }
+
+  ul {
+    @include ut.flex(row, space-between, center, 3rem);
+    list-style-type: none;
+    font-weight: 600;
+    li {
+      a {
+        text-decoration: none;
+        color: ut.$neutral-1;
+        &:hover {
+          color: ut.$main-1;
+          transition: all 0.3s;
+        }
+        &:active {
+          color: ut.$main-6;
+        }
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    opacity: 0.3;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+
+.main {
+  @include ut.flex(column, space-between, center, 1rem);
+  animation: main_anim 2s ease-in-out;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+  }
+  h2 {
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+  }
+
+  span {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: ut.$neutral-5;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: ut.$main-6;
+    color: ut.$neutral-1;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    &:hover {
+      background-color: ut.$main-4;
+      box-shadow: 0 0 6px ut.$main-4;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    &:active {
+      background-color: ut.$main-1;
+    }
+  }
+}
+
+@keyframes header_anim {
+  from {
+    filter: grayscale(100%);
+    opacity: 0.2;
+  }
+  to {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes main_anim {
+  from {
+    filter: grayscale(100%);
+    opacity: 0;
+  }
+  to {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+}
