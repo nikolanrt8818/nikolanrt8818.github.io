@@ -1,0 +1,1 @@
+{"mappings":"AAGA","sources":["styles/scss/main.scss"],"sourcesContent":["@use \"./utility/\" as ut;\r\n@use \"./layout/\" as lay;\r\n\r\nbody {\r\n  background-color: teal;\r\n}"],"names":[],"version":3,"file":"index.cf2c5149.css.map","sourceRoot":"/__parcel_source_root/"}
