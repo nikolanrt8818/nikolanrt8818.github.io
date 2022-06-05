@@ -82,6 +82,7 @@
     }
     &:active {
       background-color: ut.$main-1;
+      box-shadow: 0 0 6px ut.$main-1;
     }
   }
 }
